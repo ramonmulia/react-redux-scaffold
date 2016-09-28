@@ -9,7 +9,7 @@ let initialState = {
     username: 'kurt',
     id: 13
   },
-  load: ''
+  load: false
 }
 
 let store = configureStore(initialState)

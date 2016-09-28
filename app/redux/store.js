@@ -4,10 +4,10 @@ import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 
 let finalCreateStore = compose(
-  applyMiddleware(thunk)
+  applyMiddleware(thunk, logger())
 )(createStore)
 
 
-export default function configureStore(initialState = {user: {}, load: '' }) {
+export default function configureStore(initialState = {user: {}, load: false }) {
   return finalCreateStore(rootReducer, initialState)
 }

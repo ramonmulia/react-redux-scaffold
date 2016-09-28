@@ -18,6 +18,12 @@ module.exports = {
             query: {
                 presets: ['es2015', 'react']
             }
+        }, {
+            test: /\.scss$/,
+            loaders: ["style", "css", "sass"]
         }]
+    },
+    sassLoader: {
+        includePaths: [__dirname + '/node_modules/react-toolbox']
     }
 }

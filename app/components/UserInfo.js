@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Load from './Load'
+import { Button } from 'react-toolbox/lib/button'
 
 class UserInfo extends Component {
 
@@ -24,9 +25,9 @@ class UserInfo extends Component {
         <div>username: {this.props.user.username}</div>
         <div style={style}>id: {this.props.user.id}</div>
         <Load load={this.props.load} />
-        <button onClick={this.handleNewId.bind(this)}>Update with random ID</button>
-        <button onClick={this.handleNewIdIfOdd.bind(this)}>Update only if odd</button>
-        <button onClick={this.handleNewIdAsync.bind(this)}>Update async</button>
+        <Button className="button primary raised" label="Update with random ID" onClick={this.handleNewId.bind(this)}/>
+        <Button label="Update only if odd" onClick={this.handleNewIdIfOdd.bind(this)}/>
+        <Button label="Update async" onClick={this.handleNewIdAsync.bind(this)}/>
       </li>
     )
   }
