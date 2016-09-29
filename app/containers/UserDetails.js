@@ -2,16 +2,14 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import actions from '../redux/actions'
-import UserInfo from './UserInfo'
-import Load from './Load'
+import UserDetails from '../components/user/Details'
 
-class App extends Component {
+class Details extends Component {
 
   render() {
     return (
       <div>
-        <h1>User Info</h1>
-        <UserInfo user={this.props.user} load={this.props.load} actions={this.props.actions}/>
+        <UserDetails user={this.props.user}/>
       </div>
     )
   }
@@ -27,4 +25,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(Details)
